@@ -1,0 +1,11 @@
+M190 S0 ; Evita que prusaslicer anteponga M190 al gcode arruinando nuestra macro
+M109 S0 ; Evita que prusaslicer anteponga M109 al gcode arruinando nuestra macro
+
+; hacer sonidos caracteristicos, para saber que estamos usando Escrich Klipper Phoenix 3D printer
+M300 S440 P200
+M300 S660 P250
+
+; Pasamos el control a la macro Start_Print en nuestra impresora
+START_PRINT EXTRUDER_TEMP=[first_layer_temperature] BED_TEMP=[first_layer_bed_temperature]
+
+
