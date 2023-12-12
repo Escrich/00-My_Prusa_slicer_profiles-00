@@ -1,11 +1,15 @@
+; Gcode personalizado de incio, en Prusa Slicer, para una impresora con Klipper
+
+; Ponemos nuestras temperaturas a cero con las dos siguientes lineas, así evitamos retrasos
 M190 S0 ; Evita que prusaslicer anteponga M190 al gcode arruinando nuestra macro
 M109 S0 ; Evita que prusaslicer anteponga M109 al gcode arruinando nuestra macro
 
-; hacer sonidos caracteristicos, para saber que estamos usando Escrich Klipper Phoenix 3D printer
+; Hacer sonidos caracteristicos, para saber que estamos usando Escrich Klipper Phoenix 3D printer
 M300 S440 P200
 M300 S660 P250
 
+; Le decimos a nuestra impresora el numero total de capas a imprimir
+SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+
 ; Pasamos el control a la macro Start_Print en nuestra impresora
 START_PRINT EXTRUDER_TEMP=[first_layer_temperature] BED_TEMP=[first_layer_bed_temperature]
-
-
