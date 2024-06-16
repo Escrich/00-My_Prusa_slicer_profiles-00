@@ -17,4 +17,4 @@
 
  Gcode inicial, Gcode final, Gcode antes del cambio de capa, Gcode despues del cambio de capa, Gcode en el cambio de color, y Gcode cuando el Slicer genera una pausa.
 
- JMEC 20231007
+ JMEC Updated 20240616
